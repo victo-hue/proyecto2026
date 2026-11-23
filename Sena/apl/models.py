@@ -55,7 +55,7 @@ class Venta(models.Model):
         total = models.DecimalField(default=Decimal('0.00'), max_digits=9, decimal_places=2)
 
         def __str__(self):
-            return self.id
+            return str(self.id)
 
         class Meta: #clase meta permite renombrar tabla y atributos que se crea por defecto
             verbose_name = 'Venta'
@@ -73,7 +73,7 @@ class Det_venta(models.Model):
     subtotal = models.DecimalField(default=Decimal('0.00'), max_digits=9, decimal_places=2)
     
     def __str__(self):
-        return self.id
+        return str(self.id)
 
     class Meta:
         verbose_name = 'Detalle de Venta'
